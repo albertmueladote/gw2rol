@@ -1,0 +1,241 @@
+.tab-container {
+    width: 50%;
+    margin: auto;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab-link {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: background-color 0.3s;
+    font-size: 17px;
+    flex-grow: 1;
+    text-align: center;
+    z-index:30;
+    background-color: #FFFFFF;
+    opacity: 0.2;
+}
+
+.tab-link.active {
+    z-index:20;
+    opacity: 1;
+    color: #b40000;
+}
+
+.tab-link:hover {
+    background-color: #ddd;
+}
+
+#tab1 .image, #tab2 .image, #tab3 .image, #tab4 .image, #tab5 .image{
+    position: absolute;
+    background-size: auto 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+}
+
+#tab1 .image{
+    background-image: url('/images/wallpapers/tab1.jpg');
+}
+
+#tab2 .image{
+    background-image: url('/images/wallpapers/tab2.jpg');
+}
+
+#tab3 .image{
+    background-image: url('/images/wallpapers/tab3.jpg');
+}
+
+#tab4 .image{
+    background-image: url('/images/wallpapers/tab4.jpg');
+}
+
+#tab5 .image{
+    background-image: url('/images/wallpapers/tab5.jpg');
+}
+
+#tab1::before, #tab2::before, #tab3::before, #tab4::before, #tab5::before {
+    content: "";
+    background-image: url('/images/wallpapers/tab.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+#tab2 input{
+    width: 25px;
+    height: 25px;
+}
+
+#tab2 label{
+    vertical-align: middle;
+}
+
+.tab-content {
+    min-height: 300px;
+    display: none;
+    padding: 20px;
+    border-top: none;
+}
+
+.question-up, .question-down {
+    cursor: pointer;
+}
+
+.question-content {
+    display: none;
+}
+
+.question-content.active {
+    display: inline-block;
+}
+
+.question-content .question {
+    padding: 10px;
+    font-size: 2rem;
+}
+
+.question-content label {
+    vertical-align: top;
+    display: inline-block;
+    width: 95%;
+}
+
+.question-content input {
+    vertical-align: top;
+    display: inline-block;
+    width: 5%;
+    height: 25px;
+}
+
+.answer.asura, .answer.human, .answer.charr, .answer.norn, .answer.sylvari {
+    display: none;
+}
+
+.block-1, .block-2, .block-3 {
+    background-color: white;
+    opacity: 0.8;
+}
+
+.resume {
+    margin-top: 50px;
+}
+
+.resume-personality {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.personality {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -150px;
+    left: 50%;
+	transform: translate(-50%, 0%) rotate(-90deg);
+    clip: rect(0px, 300px, 300px, 150px);
+    transition: transform 1s ease;
+}
+
+#charm::before, #charisma::before, #aggressiveness::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    right: 120px;
+    bottom: 5px;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    transform: rotate(180deg);
+}
+
+#charm {
+    background: radial-gradient(circle, #ead1dc, #a64d79);
+    z-index: 30;
+}
+
+#charm::before { 
+    background-image: url('/images/personality/charm.png');
+}
+
+#charisma {
+    background: radial-gradient(circle, #fff2cc, #f1c232);
+    z-index: 20;
+}
+
+#charisma::before {
+    background-image: url('/images/personality/charisma.png');
+}
+
+#aggressiveness {
+    background: radial-gradient(circle, #f4cccc, #cc0000);
+    z-index: 10;
+}
+
+#aggressiveness::before {   
+    background-image: url('/images/personality/aggressiveness.png');
+}
+
+.resume .resume-race-description, .resume .resume-rol-description {
+    white-space: pre-line;
+}
+
+.reward-content {
+    text-align: center;
+    padding: 5px 25px;
+}
+
+.reward {
+    padding: 5px;
+}
+
+.reward .image {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.reward .image img {
+    width: 100%;
+}
+
+#create {
+    background: linear-gradient(180deg, #aa1817, #3e1209);
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0;
+    padding: 6px 16px;
+    text-transform: uppercase;
+    color: #F0F0F0;
+    cursor: pointer;
+}
+
+.tabs .tab-link .wrong {
+    display: inline-block;
+    color: #b40000;
+    font-weight: bold;
+    margin-left: 10px;
+}

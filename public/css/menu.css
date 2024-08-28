@@ -1,0 +1,11 @@
+.new_sheet a, .sheets a {
+	background: linear-gradient(180deg, #aa1817, #3e1209);
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0;
+    padding: 6px 16px;
+    text-transform: uppercase;
+    color: #F0F0F0;
+    cursor: pointer;
+}
